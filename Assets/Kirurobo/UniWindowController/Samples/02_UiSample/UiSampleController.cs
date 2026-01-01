@@ -74,8 +74,10 @@ namespace Kirurobo
             // Toggleのチェック状態を、現在の状態に合わせる
             UpdateUI();
 
+                Debug.Log("check uniwinc");
             if (uniwinc)
             {
+                Debug.Log("add listener");
                 // UIを操作された際にはウィンドウに反映されるようにする
                 transparentToggle?.onValueChanged.AddListener(val => uniwinc.isTransparent = val);
                 alphaSlider?.onValueChanged.AddListener(val => uniwinc.alphaValue = val);
